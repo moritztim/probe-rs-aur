@@ -1,0 +1,10 @@
+[Trigger]
+Type = Path
+Operation = Install
+Operation = Upgrade
+Target = usr/lib/udev/rules.d/69-probe-rs.rules
+
+[Action]
+Description = Reloading udev rules and triggering events...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/probe-rs.sh

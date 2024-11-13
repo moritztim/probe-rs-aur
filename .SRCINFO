@@ -1,7 +1,7 @@
 pkgbase = probe-rs
 	pkgdesc = A collection of on chip debugging tools to communicate with microchips.
 	pkgver = 0.24.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://probe.rs
 	arch = aarch64
 	arch = i686
@@ -12,10 +12,17 @@ pkgbase = probe-rs
 	makedepends = cmake
 	depends = gcc-libs
 	depends = systemd-libs
+	depends = udev
 	optdepends = rtthost: Real-time transfer client
 	conflicts = cargo-embed
 	conflicts = cargo-flash
 	source = probe-rs-tools-0.24.0.tar.gz::https://crates.io/api/v1/crates/probe-rs-tools/0.24.0/download
+	source = 69-probe-rs.rules::https://probe.rs/files/69-probe-rs.rules
+	source = udev-reload.sh
+	source = udev-reload.hook
 	sha512sums = 659b5b5c8d91728d192e32342206760d1441f44de622881930afdcc25d6f8a2dcf07ed336b34bf4ceb4ef4d0a497d074627a206bf9a038a134cd15598dacfec6
+	sha512sums = 04cc7011120b0c04006f15a2b924f63db2a4425aa30d5a4363a15e70b902b3cfea12b5201d3e11f496707026f7c0d8827556223174c0c9b44148aa56a81f615f
+	sha512sums = 2a1ed300c10cb70aa1fd621ebb24d9a9f65ab908978c3bd664cd03c9c0ad48f208356f34724bc4446e4d5e11e1ed280ce0c90423950bf0ed60e8a8df4f88e591
+	sha512sums = ddd12e42af820d96d7b6720070806271f57036ac39947d8e78923d5813cf402445bd0a707de2b81f0ded2be9336b13e083dfc9c0791f5aa694a361403c4a4943
 
 pkgname = probe-rs
